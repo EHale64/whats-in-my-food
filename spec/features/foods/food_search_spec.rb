@@ -4,7 +4,7 @@ RSpec.describe 'Food Search' do
   it "should bring up a list of foods for an ingredient" do
     visit root_path
 
-    fill_in :foods, with: 'sweet potatoes'
+    fill_in :q, with: 'sweet potatoes'
 
     click_on 'Search'
 
