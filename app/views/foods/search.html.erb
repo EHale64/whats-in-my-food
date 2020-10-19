@@ -1,4 +1,4 @@
-<h1><%= @results %> Foods Found</h1>
+<h1><%= @foods.size %> Foods Found</h1>
 <% @foods.each do |food| %>
 <section class='food'>
   <section class='code'>GTIN/UPC code: <%= food.gtin_upc %></section>

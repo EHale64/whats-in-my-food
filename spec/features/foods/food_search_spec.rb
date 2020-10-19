@@ -10,7 +10,7 @@ RSpec.describe 'Food Search' do
 
     expect(current_path).to eq(foods_path)
 
-    expect(page).to have_content('38680 Foods Found')
+    expect(page).to have_content('10 Foods Found')
     expect(page).to have_css('.food', count: 10)
 
     within(first('.food')) do
