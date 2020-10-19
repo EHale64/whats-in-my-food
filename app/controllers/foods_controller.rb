@@ -11,6 +11,8 @@ class FoodsController < ApplicationController
 
     json = JSON.parse(response.body, symbolize_names: true)
     @results = json[:totalHits]
-    @foods = json[:foods].first(10)
+    @foods = json[:foods].first(10).map do |food_data|
+      Food.new(food_data)
+    end
   end
 end

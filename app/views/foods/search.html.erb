@@ -1,9 +1,9 @@
 <h1><%= @results %> Foods Found</h1>
 <% @foods.each do |food| %>
 <section class='food'>
-  <section class='code'><%= food[:gtinUpc] %></section>
-  <section class='description'><%= food[:description] %></section>
-  <section class='brand_owner'><%= food[:brandOwner] %></section>
-  <section class='ingredients'><%= food[:ingredients] %></section>
-</section>
+  <section class='code'>GTIN/UPC code: <%= food.gtin_upc %></section>
+  <section class='description'>description: <%= food.description %></section>
+  <section class='brand_owner'>Brand Owner: <%= food.brand_owner %></section>
+  <section class='ingredients'>ingredients: <%= food.ingredients %></section>
+</section><br>
 <% end %>
